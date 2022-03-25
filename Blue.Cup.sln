@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30114.105
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Blue.Cup.Api", "Blue.Cup.Api\Blue.Cup.Api.csproj", "{93B3A91D-0BFB-4684-9AF3-A8D6B83A61C0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Blue.Cup.Domain", "Blue.Cup.Domain\Blue.Cup.Domain.csproj", "{49A5E9DA-0001-4488-B3F4-826D581F7A84}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{93B3A91D-0BFB-4684-9AF3-A8D6B83A61C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{93B3A91D-0BFB-4684-9AF3-A8D6B83A61C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{93B3A91D-0BFB-4684-9AF3-A8D6B83A61C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{93B3A91D-0BFB-4684-9AF3-A8D6B83A61C0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{49A5E9DA-0001-4488-B3F4-826D581F7A84}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{49A5E9DA-0001-4488-B3F4-826D581F7A84}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{49A5E9DA-0001-4488-B3F4-826D581F7A84}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{49A5E9DA-0001-4488-B3F4-826D581F7A84}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
