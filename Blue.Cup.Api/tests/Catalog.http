@@ -1,0 +1,54 @@
+
+### GET '/catalog' root with https
+GET https://localhost:7245/catalog
+
+### GET '/catalog/ root with http
+GET http://localhost:5005/catalog
+
+### GET '/catalog/1234 root with https
+GET https://localhost:7245/catalog/1234
+
+### POST a new Item to the Catalog collection
+POST https://localhost:7245/catalog
+Content-Type: application/json
+
+{
+    "name": "Shoes",
+    "description": "Ohio State shoes",
+    "brand": "Nike",
+    "price": 129.99
+}
+
+### POST a new rating to an Item in the Catalog collection
+POST https://localhost:7245/catalog/3/ratings
+Content-Type: application/json
+
+{
+  "stars": 1,
+  "userName": "string",
+  "review": "string"
+}
+
+### PUT an update to an item based on itss ID
+PUT https://localhost:7245/catalog/3
+Content-Type: application/json
+
+{
+  "id": 3,
+  "name": "string",
+  "description": "string",
+  "brand": "string",
+  "price": 2.00,
+  "ratings": [
+    {
+      "stars": 2,
+      "userName": "string",
+      "review": "string"
+    }
+  ]
+}
+
+### PUT an update to an item based on its ID
+DELETE https://localhost:7245/catalog/3
+Content-Type: application/json
+
