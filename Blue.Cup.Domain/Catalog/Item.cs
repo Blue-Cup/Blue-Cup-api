@@ -1,8 +1,10 @@
 using System;
 
-namespace Blue.Cup.Domain.Catalog{
+namespace Blue.Cup.Domain.Catalog
+{
 
-    public class Item{
+    public class Item
+    {
         public int ID{ get; set; }
         public string Name { get; set; }
         public string Description{ get; set; }
@@ -37,11 +39,11 @@ namespace Blue.Cup.Domain.Catalog{
             Price = price;
 
         }
-
         public void AddRating(Rating rating)
         {
             this.Ratings.Add(rating);
         }
+        
 
     }
       
