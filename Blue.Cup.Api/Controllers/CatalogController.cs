@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Blue.Cup.Domain.Catalog;
 using Blue.Cup.Data;
+using Microsoft.EntityFrameworkCore;
 
 namespace Blue.Cup.Api.Controllers
 {
@@ -56,8 +57,21 @@ namespace Blue.Cup.Api.Controllers
         }
 
         [HttpPut("{id:int}")]
-        public IActionResult Put(int id, Item item)
+        public IActionResult PutItem(int id, [FromBody] Item item)
         {
+            if (id != item.ID)
+            {
+                return BadRequest();
+            }
+
+            if (_db.Items?.Find(id) == null)
+            {
+                return NotFound();
+            }
+
+            _db.Entry(item).State = EntityState.Modified;
+            _db.SaveChanges();
+
             return NoContent();
         }
 
