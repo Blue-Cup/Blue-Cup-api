@@ -2,7 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 using Blue.Cup.Domain.Catalog;
 using Blue.Cup.Data;
 
-namespace Jet.Piranha.Api.Controllers
+namespace Blue.Cup.Api.Controllers
 {
     [ApiController]
     [Route("/controller")]
@@ -25,10 +25,12 @@ namespace Jet.Piranha.Api.Controllers
         [HttpGet("{id:int}")]
         public IActionResult GetItem(int id)
         {
-            var item = new Item("Shirt", "Ohio State shirt", "Nike", 29.99m);
-            item.ID = id;
-
-            return Ok(item);
+            var item = _db.Items?.Find(id);
+            if (item == null)
+            {
+                return NotFound();
+            }
+            return Ok();
         }
 
         [HttpPost]
