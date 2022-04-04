@@ -12,6 +12,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Blue.Cup.Domain\Blue.Cup.Domain.csproj" />
+    <ProjectReference Include="..\Blue.Cup.Data\Blue.Cup.Data.csproj" />
   </ItemGroup>
 
 </Project>
