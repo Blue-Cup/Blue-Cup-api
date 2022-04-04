@@ -11,12 +11,11 @@ GET https://localhost:7245/catalog/1234
 ### POST a new Item to the Catalog collection
 POST https://localhost:7245/catalog
 Content-Type: application/json
-
 {
     "name": "Shoes",
-    "description": "Ohio State shoes",
+    "description": "Running shoes",
     "brand": "Nike",
-    "price": 129.99
+    "price": 109.99
 }
 
 ### POST a new rating to an Item in the Catalog collection
