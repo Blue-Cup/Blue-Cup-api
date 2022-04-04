@@ -24,8 +24,8 @@ Content-Type: application/json
 
 {
   "stars": 1,
-  "userName": "string",
-  "review": "string"
+  "userName": "testUserName",
+  "review": "testReview"
 }
 
 ### PUT an update to an item based on itss ID
