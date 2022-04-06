@@ -13,40 +13,32 @@ POST https://localhost:7245/catalog
 Content-Type: application/json
 
 {
-  "id": 2,
+  "id": 23,
   "name": "Shoes",
   "description": "OSU Shoes",
   "brand": "Nike",
   "price": 29.99,
   "ratings": [
-    {
-      "id": 4,
-      "star": 1,
-      "stars": 1,
-      "userName": "testID",
-      "review": "Good"
-    }
+    
   ]
 }
 
 ### POST a new rating to an Item in the Catalog collection
-POST https://localhost:7245/catalog/3/ratings
+POST https://localhost:7245/catalog/1/ratings
 Content-Type: application/json
 
 {
-  "id": 2,
-  "star": 2,
-  "stars": 2,
+  "id": 1,
+  "stars": 3,
   "userName": "Test",
   "review": "Test"
 }
 
-### PUT an update to an item based on itss ID
-PUT https://localhost:7245/catalog/2
+### PUT an update to an item based on its ID
+PUT https://localhost:7245/catalog/1
 Content-Type: application/json
 
 {
-  "id": 3,
   "name": "Ohio State Shirt",
   "description": "Shirt",
   "brand": "Nike",
@@ -54,7 +46,6 @@ Content-Type: application/json
   "ratings": [
     {
       "id": 2,
-      "star": 1,
       "stars": 1,
       "userName": "Test",
       "review": "Tests"
