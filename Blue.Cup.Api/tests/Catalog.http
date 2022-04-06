@@ -6,16 +6,27 @@ GET https://localhost:7245/catalog
 GET http://localhost:5005/catalog
 
 ### GET '/catalog/1234 root with https
-GET https://localhost:7245/catalog/1234
+GET https://localhost:7245/catalog/1
 
 ### POST a new Item to the Catalog collection
 POST https://localhost:7245/catalog
 Content-Type: application/json
+
 {
-    "name": "Shoes",
-    "description": "Running shoes",
-    "brand": "Nike",
-    "price": 109.99
+  "id": 2,
+  "name": "Shoes",
+  "description": "OSU Shoes",
+  "brand": "Nike",
+  "price": 29.99,
+  "ratings": [
+    {
+      "id": 4,
+      "star": 1,
+      "stars": 1,
+      "userName": "testID",
+      "review": "Good"
+    }
+  ]
 }
 
 ### POST a new rating to an Item in the Catalog collection
@@ -23,31 +34,35 @@ POST https://localhost:7245/catalog/3/ratings
 Content-Type: application/json
 
 {
-  "stars": 1,
-  "userName": "testUserName",
-  "review": "testReview"
+  "id": 2,
+  "star": 2,
+  "stars": 2,
+  "userName": "Test",
+  "review": "Test"
 }
 
 ### PUT an update to an item based on itss ID
-PUT https://localhost:7245/catalog/3
+PUT https://localhost:7245/catalog/2
 Content-Type: application/json
 
 {
   "id": 3,
-  "name": "string",
-  "description": "string",
-  "brand": "string",
-  "price": 2.00,
+  "name": "Ohio State Shirt",
+  "description": "Shirt",
+  "brand": "Nike",
+  "price": 79.99,
   "ratings": [
     {
-      "stars": 2,
-      "userName": "string",
-      "review": "string"
+      "id": 2,
+      "star": 1,
+      "stars": 1,
+      "userName": "Test",
+      "review": "Tests"
     }
   ]
 }
 
-### PUT an update to an item based on its ID
-DELETE https://localhost:7245/catalog/3
+### DELETE an update to an item based on its ID
+DELETE https://localhost:7245/catalog/2
 Content-Type: application/json
 

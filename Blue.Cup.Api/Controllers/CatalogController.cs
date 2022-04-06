@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore;
 namespace Blue.Cup.Api.Controllers
 {
     [ApiController]
-    [Route("/controller")]
+    [Route("/catalog")] // or [Route("[controller]")]
     public class CatalogController : ControllerBase
     {
         private readonly StoreContext _db;
