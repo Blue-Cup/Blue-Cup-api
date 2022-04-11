@@ -9,6 +9,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Blue.Cup.Domain", "Blue.Cup
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Blue.Cup.Data", "Blue.Cup.Data\Blue.Cup.Data.csproj", "{88ED903A-2676-4F5D-AC9F-9B8B34E56D7A}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{BE1D8647-908D-47D6-8D97-5328A88A16BA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Blue.Cup.Domain.Tests", "tests\Blue.Cup.Domain.Tests\Blue.Cup.Domain.Tests.csproj", "{3C9CCFA7-D467-4B8E-A4AC-2E4FF0A997B3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -30,5 +34,12 @@ Global
 		{88ED903A-2676-4F5D-AC9F-9B8B34E56D7A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{88ED903A-2676-4F5D-AC9F-9B8B34E56D7A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{88ED903A-2676-4F5D-AC9F-9B8B34E56D7A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3C9CCFA7-D467-4B8E-A4AC-2E4FF0A997B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3C9CCFA7-D467-4B8E-A4AC-2E4FF0A997B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3C9CCFA7-D467-4B8E-A4AC-2E4FF0A997B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3C9CCFA7-D467-4B8E-A4AC-2E4FF0A997B3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{3C9CCFA7-D467-4B8E-A4AC-2E4FF0A997B3} = {BE1D8647-908D-47D6-8D97-5328A88A16BA}
 	EndGlobalSection
 EndGlobal
