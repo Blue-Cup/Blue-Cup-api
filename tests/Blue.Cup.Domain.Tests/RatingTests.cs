@@ -1,9 +1,10 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Blue.Cup.Domain.Catalog;
 namespace Blue.Cup.Domain.Tests;
+using System;
 
 [TestClass]
-public class RatingTest
+public class RatingTests
 {
    [TestMethod]
    public void Can_Create_New_Rating()
@@ -19,5 +20,12 @@ public class RatingTest
    Assert.AreEqual("Great fit!", rating.Review);
    }
 
+    [TestMethod]
+    [ExpectedException(typeof(ArgumentException))]
+    public void Cannot_Create_Rating_With_Invalid_Stars()
+    {
+        // Arrange
+        var rating = new Rating(0, "Mike", "Great fit");
+    }
 
 }
