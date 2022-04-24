@@ -54,6 +54,11 @@ Content-Type: application/json
 }
 
 ### DELETE an update to an item based on its ID
-DELETE https://localhost:7245/catalog/2
+DELETE https://localhost:7245/catalog/3
 Content-Type: application/json
 
+### Get token from Auth0
+curl --request POST \
+  --url https://dev-dk-8282g.us.auth0.com/oauth/token \
+  --header 'content-type: application/json' \
+  --data '{"client_id":"gFi0dxolb9ejhDuIkLCbIkzxkzCWkJk4","client_secret":"w2OXfVmpFihgSbU6lXSOwSLzynr44sFI5zyFczWOZkE50PUb105TWNRB8DPcqLPk","audience":"https://blue-cup","grant_type":"client_credentials"}'
