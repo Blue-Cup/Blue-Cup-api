@@ -27,6 +27,12 @@ builder.Services.AddAuthentication(options =>
         options.Audience = audience;
     });
 
+builder.Services.AddAuthorization(options =>
+{
+    options.AddPolicy("delete:catalog", policy =>
+        policy.RequireAuthenticatedUser().RequireClaim("scope", "delete:catalog"));
+});
+
 builder.Services.AddDbContext<StoreContext>(options => options.UseSqlite("Data Source=../Registrar.sqlite", b => b.MigrationsAssembly("Blue.Cup.Api")));
 
 builder.Services.AddCors(options =>
@@ -53,11 +59,9 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
-
 app.UseCors();
-
+app.UseAuthentication();
 app.UseAuthorization();
-
+app.UseAuthorization();
 app.MapControllers();
-
 app.Run();
