@@ -15,6 +15,18 @@ string audience = builder.Configuration["Auth0:Audience"] ??
 // Add services to the container.
 
 builder.Services.AddControllers();
+
+builder.Services.AddAuthentication(options =>
+    {
+        options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+        options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+    })
+    .AddJwtBearer(options =>
+    {
+        options.Authority = authority;
+        options.Audience = audience;
+    });
+
 builder.Services.AddDbContext<StoreContext>(options => options.UseSqlite("Data Source=../Registrar.sqlite", b => b.MigrationsAssembly("Blue.Cup.Api")));
 
 builder.Services.AddCors(options =>
