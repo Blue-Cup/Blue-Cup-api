@@ -37,7 +37,7 @@ builder.Services.AddAuthorization(options =>
 });
 
 builder.Services.AddDbContext<StoreContext>(options => 
-    options.UseSqlite(storeConnectionString, 
+    options.UseSqlServer(storeConnectionString, 
     b => b.MigrationsAssembly("Blue.Cup.Api")));
 
 builder.Services.AddCors(options =>
