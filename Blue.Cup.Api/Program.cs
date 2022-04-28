@@ -12,6 +12,9 @@ string authority = builder.Configuration["Auth0:Authority"] ??
 string audience = builder.Configuration["Auth0:Audience"] ??
     throw new ArgumentNullException("Auth0:Audience");
 
+string storeConnectionString = builder.Configuration.GetConnectionString("StoreConnection") ??
+    throw new ArgumentNullException("ConnectionString:StoreConnection");
+
 // Add services to the container.
 
 builder.Services.AddControllers();
@@ -33,7 +36,9 @@ builder.Services.AddAuthorization(options =>
         policy.RequireAuthenticatedUser().RequireClaim("scope", "delete:catalog"));
 });
 
-builder.Services.AddDbContext<StoreContext>(options => options.UseSqlite("Data Source=../Registrar.sqlite", b => b.MigrationsAssembly("Blue.Cup.Api")));
+builder.Services.AddDbContext<StoreContext>(options => 
+    options.UseSqlServer(storeConnectionString, 
+    b => b.MigrationsAssembly("Blue.Cup.Api")));
 
 builder.Services.AddCors(options =>
 {
