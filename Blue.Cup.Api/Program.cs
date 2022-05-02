@@ -44,9 +44,10 @@ builder.Services.AddCors(options =>
 {
     options.AddDefaultPolicy(builder =>
     {
-        builder.WithOrigins("http://localhost:3000")
-        .AllowAnyHeader()
-        .AllowAnyMethod();
+        builder.WithOrigins("http://localhost:3000",
+        "https://blue-cup-api.azurewebsites.net")
+            .AllowAnyHeader()
+            .AllowAnyMethod();
     });
 });
 
